@@ -23,10 +23,10 @@ const GameGrid = (
 
     if (error) return <Text>{error.message}</Text>
 
-    const fetcedGameesCount = data?.pages.reduce((acc, page) => acc + page.results.length, 0) || 0
+    const fetcedGamesCount = data?.pages.reduce((acc, page) => acc + page.results.length, 0) || 0
 
     return (
-        <InfiniteScroll next={fetchNextPage} hasMore={!!hasNextPage} loader={<Spinner/>} dataLength={fetcedGameesCount}>
+        <InfiniteScroll next={fetchNextPage} hasMore={!!hasNextPage} loader={<Spinner/>} dataLength={fetcedGamesCount}>
 
             <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 4}}
                         spacing={6} padding='10px'>

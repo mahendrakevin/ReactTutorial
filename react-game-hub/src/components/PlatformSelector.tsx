@@ -5,7 +5,7 @@ import usePlatform from "../hooks/usePlatform.ts";
 
 interface Props {
     onSelectPlatform: (platform: Platform) => void
-    selectedPlatformId: number
+    selectedPlatformId?: number
 }
 
 const PlatformSelector = (
