@@ -9,7 +9,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const GameGrid = () => {
     const {
-        data, error, isLoading,
+        data, error, isFetching,
         fetchNextPage,
         hasNextPage
     } = useGames();
@@ -24,7 +24,7 @@ const GameGrid = () => {
 
             <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 4}}
                         spacing={6} padding='10px'>
-                {isLoading && skeletons.map(skeleton => (
+                {isFetching && skeletons.map(skeleton => (
                     <GameCardContainer key={skeleton}>
                         <GameCardSkeleton key={skeleton}/>
                     </GameCardContainer>
